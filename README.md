@@ -1,9 +1,6 @@
-
-
 ## Descrição
-
-Teste dado pela loja santo antonio com objetivo de fazer um NPS com canais, perguntas e respostas
-
+Teste dado pela loja santo antonio com objetivo de fazer um NPS com canais, perguntas e respostas.
+Link para o front do teste [S.Antonio-NPS-FE](https://github.com/Micalli/S.Antonio-NPS-FE)
 
  ## Ferramentes da API
   - TypeScript
@@ -13,6 +10,7 @@ Teste dado pela loja santo antonio com objetivo de fazer um NPS com canais, perg
   - Docker
   - Redis
   - PostgreSQL
+  - Nodev20.14
 
 ## Variável de ambiente
 Crie o .env e coloca a URL do banco nessa variável.
@@ -27,7 +25,7 @@ DATABASE_URL
 $ yarn install
 ```
 
-## Rodando o app
+## Rodando a API
 
 ```bash
 # development
