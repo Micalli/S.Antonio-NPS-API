@@ -27,6 +27,9 @@ export class QuestionsService {
       where: {
         channelId,
       },
+      include: {
+        Answers: true,
+      },
     });
   }
 
@@ -43,10 +46,6 @@ export class QuestionsService {
 
   async rateQuestion(questionId: string, rateQuestionDto: RateQuestionDto) {
     const { grade, note } = rateQuestionDto;
-    console.log(
-      '🚀 ~ QuestionsService ~ rateQuestion ~ rateQuestionDto:',
-      rateQuestionDto,
-    );
 
     return this.questionsRepository.update({
       where: {

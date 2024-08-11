@@ -11,7 +11,9 @@ import {
 import { CreateChannelDto } from './dto/create-channel.dto';
 import { UpdateChannelDto } from './dto/update-channel.dto';
 import { ChannelsService } from './services/channels.service';
+import { ApiTags } from '@nestjs/swagger';
 
+@ApiTags('Canais')
 @Controller('canais')
 export class ChannelsController {
   constructor(private readonly channelsService: ChannelsService) {}

@@ -12,11 +12,15 @@ import { UpdateQuestionDto } from './dto/update-question.dto';
 import { QuestionsService } from './services/questions.service';
 import { RateQuestionDto } from './dto/rate-question.dto';
 
+import { ApiResponse, ApiTags } from '@nestjs/swagger';
+
+@ApiTags('Perguntas')
 @Controller('perguntas')
 export class QuestionsController {
   constructor(private readonly questionsService: QuestionsService) {}
 
   @Post()
+  @ApiResponse({ status: 404, description: 'ID do canal passado não existe.' })
   create(@Body() createQuestionDto: CreateQuestionDto) {
     return this.questionsService.create(createQuestionDto);
   }

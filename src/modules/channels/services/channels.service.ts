@@ -16,7 +16,11 @@ export class ChannelsService {
   }
 
   async findAll() {
-    return this.channelsRepository.findMany({});
+    return this.channelsRepository.findMany({
+      include: {
+        Questions: true,
+      },
+    });
   }
 
   async update(channelId: string, updateChannelDto: UpdateChannelDto) {
