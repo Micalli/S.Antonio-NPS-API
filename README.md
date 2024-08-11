@@ -13,7 +13,7 @@ Link para o front do teste [S.Antonio-NPS-FE](https://github.com/Micalli/S.Anton
   - Nodev20.14
 
 ## Variável de ambiente
-Crie o .env e coloca a URL do banco nessa variável.
+Crie o `.env` e seguindo o exemplo do `.env.example`
 
 ```bash
 DATABASE_URL
