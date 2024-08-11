@@ -19,13 +19,23 @@ Crie o .env e coloca a URL do banco nessa variável.
 DATABASE_URL
 ```
 
-## Instalação
+
+
+## Rodando a API
+#### Clone
+```bash
+$ git clone https://github.com/Micalli/S.Antonio-NPS-API.git && S.Antonio-NPS-API
+```
+#### Rodando PostgreSQL com Docker
+```bash
+docker run --name pg -e POSTGRES_USER=root -e POSTGRES_PASSWORD=root -p 5432:5432 -d postgres
+```
+
+#### Instalação da depedencias
 
 ```bash
 $ yarn install
 ```
-
-## Rodando a API
 
 ```bash
 # development
@@ -37,6 +47,8 @@ $ yarn run start:dev
 # production mode
 $ yarn run start:prod
 ```
+
+
 ## Swagger
 Com a API rodando acesse o link [SwaggerLink(http://localhost:3000/api)](http://localhost:3000/api)
 
